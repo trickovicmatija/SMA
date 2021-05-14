@@ -25,4 +25,6 @@ In order to run the model, you should:
 4) Manually navigate to "/static/index.html"
 5) Upload the image and predict the outcome
 
+
+
 **This is created as a part of Master's thesis at the Centre for Human Molecular Genetics, University of Belgrade - Faculty of Biology.**

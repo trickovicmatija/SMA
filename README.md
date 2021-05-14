@@ -3,17 +3,17 @@ The model is designed to analyze image outputs from *SALSA MC002 SMA NEWBORN SCR
 The machine used is *Applied Biosystems 7500 Real-Time PCR System*.
 The software used is *HID Real-Time PCR Analysis Software v1.2.*
 
-**Includes:**
+## Includes:
 1) .h5 file (saved model with both structure and weights)
 2) static folder with .html page
 3) .py flask backend
 4) an example of an input
 5) .ipynb file used for model training
 
-**Prerequisites:**
+## Prerequisites:
 1) Python 3.X
 2) Tensorflow and it's dependencies
-3) Flask
+3) Flask library
 
 ## In order to run locally:
 1) Install the prerequisites

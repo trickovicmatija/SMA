@@ -4,7 +4,23 @@ The model is designed to analyze image outputs from SALSA MC002 SMA NEWBORN SCRE
 The machine used is Applied Biosystems 7500 Real-Time PCR System.
 The software used is HID Real-Time PCR Analysis Software v1.2.
 
-Other than Jupyter Notebook, there is example of a possible input picture.
-This repository also contains saved model (both structure and weights), html page and flask scirpt used for running it locally.
+Includes:
+1) .h5 file (saved model with both structure and weights)
+2) static folder with .html page
+3) .py flask backend
+4) an example of an input
+5) .ipynb file used for model training
+
+Prerequisites:
+1) Python 3.X
+2) Tensorflow and it's dependencies
+3) Flask
+
+In order to run locally:
+1) Install the prerequisites
+2) Clone the repository on local machine
+3) Run flask script with "FLASK_APP=predict_app.py flask run"
+4) Manually navigate to /static/index.html
+5) Uplad and predict the outcome
 
 This is created as a part of Master's thesis at the Centre for Human Molecular Genetics, University of Belgrade - Faculty of Biology.

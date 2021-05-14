@@ -1,5 +1,5 @@
 # Model for SALSA MC002 NBS Results Interpretation
-The model is designed to analyze image outputs from *SALSA MC002 SMA NEWBORN SCREEN ASSAY* (MRC Holland).
+The model is designed to analyze image outputs from *SALSA MC002 SMA NEWBORN SCREEN ASSAY* (MRC Holland). /n
 The machine used is *Applied Biosystems 7500 Real-Time PCR System*.
 The software used is *HID Real-Time PCR Analysis Software v1.2.*
 

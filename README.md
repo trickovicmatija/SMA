@@ -1,5 +1,4 @@
 # Model for Medical Data Analysis
-This repository contains commented Jupyter Notebook file, where the model was created.
 The model is designed to analyze image outputs from *SALSA MC002 SMA NEWBORN SCREEN ASSAY* (MRC Holland).
 The machine used is *Applied Biosystems 7500 Real-Time PCR System*.
 The software used is *HID Real-Time PCR Analysis Software v1.2.*
@@ -16,7 +15,7 @@ The software used is *HID Real-Time PCR Analysis Software v1.2.*
 2) Tensorflow and it's dependencies
 3) Flask
 
-**In order to run locally:**
+# In order to run locally:
 1) Install the prerequisites
 2) Clone the repository on local machine via "git clone"
 3) Run the flask script with "FLASK_APP=predict_app.py flask run" in terminal

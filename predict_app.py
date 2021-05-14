@@ -8,18 +8,18 @@ import tensorflow as tf
 
 app = Flask(__name__)
 
-def get_model(): #funkcija koja ucitava model
+def get_model():
     global model
     model = tf.keras.models.load_model("model_za_flask.h5")
     print("* Model loaded!")
 
-def preprocess_image(image): #obrada slike, da bi bila ista kao u treningu
-    image= img_to_array(image) #konvertuje u matricu
-    image = np.dot(image[...,:3], [0.2989,0.5870,0.1140]) #prebacuje u crno-belu
-    image =  image[165:470,270:340] #isece odgovarajuci deo
-    image = image/255.0 #normalizacija
-    image = image.reshape(305,70,1) #dodaje trecu dimenziju (1 posto je crno-bela)
-    image = np.expand_dims(image, axis = 0) #dodaje jos jednu dimenziju
+def preprocess_image(image): #image preprocessing 
+    image= img_to_array(image)
+    image = np.dot(image[...,:3], [0.2989,0.5870,0.1140]) #converting image to black&white
+    image =  image[165:470,270:340] #slecting the SMN1-coresponding region of the image
+    image = image/255.0
+    image = image.reshape(305,70,1) #adds the third dimension
+    image = np.expand_dims(image, axis = 0) #adds the fourth dimension
     return image
 
 print("* Loading Keras model....")
@@ -30,14 +30,14 @@ get_model()
 def predict():
     message = request.get_json(force=True)
     encoded = message['image']
-    decoded = base64.b64decode(encoded) #prebacuje sliku u odgovarajuci oblik
+    decoded = base64.b64decode(encoded)
     image = Image.open(io.BytesIO(decoded))
-    processed_image = preprocess_image(image) #obradjuje sliku
+    processed_image = preprocess_image(image) #preprocess the image with the above function
 
-    prediction = model.predict(processed_image)  #predvidjanje - daje verovatnocu
+    prediction = model.predict(processed_image)
     for i in prediction:
-        if float(prediction[0]) > 0.5:  #po kljucu 0:SMA+ ; 1:SMA-
-            response = "Osoba je SMA negativna, sigurnost predviđanja je "+str(round(float(prediction[0])*100,2))+"%"
+        if float(prediction[0]) > 0.5:
+            response = "The sample is SMA negative, the certainty is "+str(round(float(prediction[0])*100,2))+"%"
         else:
-            response = "Osoba je SMA pozitivna, sigurnost predviđanja je "+str(round((1-float(prediction[0]))*100,2))+"%"
+            response = "The sample is SMA positive, the certainty is "+str(round((1-float(prediction[0]))*100,2))+"%"
     return jsonify(response)

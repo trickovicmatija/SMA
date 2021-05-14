@@ -17,7 +17,11 @@ The prerequisites are following:
 2) Tensorflow and it's dependencies
 3) Flask library
 
-## How can I run it locally?
+## How can I run it locally?  
+''' pip3 install tensorflow && flask  
+git clone https://github.com/trickovicmatija/SMA.git  
+FLASK_APP=predict_app.py flask run  
+'''
 In order to run the model, you should:
 1) Install the prerequisites
 2) Clone the repository on local machine via "git clone"

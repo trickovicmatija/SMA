@@ -27,8 +27,8 @@ flask run --host=127.0.0.1
 In order to run the model, you should:
 1) Install the prerequisites
 2) Clone the repository on local machine via "git clone"
-3) Run the flask script with "FLASK_APP=predict_app.py flask run" in terminal
-4) Manually navigate to "/static/index.html"
+3) Run the flask script
+4) Manually navigate to "/static/index.html" in address bar
 5) Upload the image and predict the outcome
 
 

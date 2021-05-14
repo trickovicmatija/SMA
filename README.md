@@ -21,7 +21,8 @@ The prerequisites are following:
 ```  
 pip3 install tensorflow && flask  
 git clone https://github.com/trickovicmatija/SMA.git  
-FLASK_APP=predict_app.py flask run   
+export FLASK_APP=predict_app.py
+flask run --host=127.0.0.1  
 ```  
 In order to run the model, you should:
 1) Install the prerequisites

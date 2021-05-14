@@ -19,8 +19,8 @@ The software used is *HID Real-Time PCR Analysis Software v1.2.*
 **In order to run locally:**
 1) Install the prerequisites
 2) Clone the repository on local machine via "git clone"
-3) Run flask script with "FLASK_APP=predict_app.py flask run" in terminal
-4) Manually navigate to /static/index.html
+3) Run the flask script with "FLASK_APP=predict_app.py flask run" in terminal
+4) Manually navigate to "/static/index.html"
 5) Upload the image and predict the outcome
 
-This is created as a part of Master's thesis at the Centre for Human Molecular Genetics, University of Belgrade - Faculty of Biology.
+**This is created as a part of Master's thesis at the Centre for Human Molecular Genetics, University of Belgrade - Faculty of Biology.**

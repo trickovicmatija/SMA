@@ -21,6 +21,7 @@ The prerequisites are following:
 ```  
 pip3 install tensorflow flask  
 git clone https://github.com/trickovicmatija/SMA.git  
+cd SMA
 export FLASK_APP=predict_app.py
 flask run --host=127.0.0.1  
 ```  

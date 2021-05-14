@@ -18,7 +18,7 @@ The prerequisites are following:
 3) Flask library
 
 ## How can I run it locally?  
-```  
+```bash  
 pip3 install tensorflow && flask  
 git clone https://github.com/trickovicmatija/SMA.git  
 export FLASK_APP=predict_app.py

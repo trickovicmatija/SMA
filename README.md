@@ -15,7 +15,7 @@ The software used is *HID Real-Time PCR Analysis Software v1.2.*
 2) Tensorflow and it's dependencies
 3) Flask
 
-# In order to run locally:
+## In order to run locally:
 1) Install the prerequisites
 2) Clone the repository on local machine via "git clone"
 3) Run the flask script with "FLASK_APP=predict_app.py flask run" in terminal

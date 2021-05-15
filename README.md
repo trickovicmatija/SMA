@@ -8,7 +8,7 @@ This repository includes:
 1) .h5 file (saved model with both structure and weights)
 2) static folder with .html page
 3) .py flask backend
-4) an example of an input image
+4) examples of input images
 5) .ipynb file used for model training
 
 ## What should I install in order to run this model?

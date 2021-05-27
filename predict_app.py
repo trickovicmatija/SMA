@@ -10,7 +10,7 @@ app = Flask(__name__)
 
 def get_model():
     global model
-    model = tf.keras.models.load_model("model_za_flask.h5")
+    model = tf.keras.models.load_model("model.h5")
     print("* Model loaded!")
 
 def preprocess_image(image): #image preprocessing 

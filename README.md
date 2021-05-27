@@ -19,7 +19,7 @@ The prerequisites are following:
 
 ## How can I run it locally?  
 ```  
-pip3 install tensorflow flask  
+pip3 install tensorflow python3-flask  
 git clone https://github.com/trickovicmatija/SMA.git  
 cd SMA
 export FLASK_APP=predict_app.py

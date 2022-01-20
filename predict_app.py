@@ -37,7 +37,7 @@ def predict():
     prediction = model.predict(processed_image)
     for i in prediction:
         if float(prediction[0]) > 0.5:
-            response = "The sample is SMA negative, the certainty is "+str(round(float(prediction[0])*100,2))+"%"
+            response = "The sample is SMA negative!"
         else:
-            response = "The sample is SMA positive, the certainty is "+str(round((1-float(prediction[0]))*100,2))+"%"
+            response = "The sample is SMA positive!"
     return jsonify(response)
